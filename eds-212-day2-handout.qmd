@@ -32,5 +32,5 @@ library(palmerpenguins)
     ```
 
 ```{r}
-ggplot(data = penguins, aes(x = penguins$species, y = penguins$flipper_length_mm)) + geom_jitter() + labs(x = "Species", y = "Flipper Length in MM", title = "Penguin Flipper Size by Species")
+ggplot(data = penguins, aes(x = penguins$species, y = penguins$flipper_length_mm)) + geom_jitter() + labs(x = "Penguin Species", y = "Flipper Length in MM", title = "Penguin Flipper Size by Species")
 ```
