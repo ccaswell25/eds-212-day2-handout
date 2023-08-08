@@ -6,3 +6,21 @@ title: "eds-212-day2-handout"
 library(tidyverse)
 library(palmerpenguins)
 ```
+
+1.  Find the slope of f(x)= x \^ 2 , x = 3
+
+    ```{r}
+    fx = expression( x ^ 2)
+    x = 3
+    D = D(fx, 'x')
+    eval(D)
+    ```
+
+2.  Find the slope of P(a)= 2(3a+2)^4−5, a=1.2
+
+    ```{r}
+    ax = expression(2 * (3 * a + 2) ^ 4 - 5)
+    a = 1.2
+    dax = D(ax, 'a')
+    eval(dax)
+    ```
