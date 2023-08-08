@@ -24,3 +24,13 @@ library(palmerpenguins)
     dax = D(ax, 'a')
     eval(dax)
     ```
+
+3.  Let's create a penguin plot create a `ggplot` graph of penguin bill length versus bill depth (using the `penguins` dataset in the `palmerpenguins` package), with point color dependent on species. You should attach the `tidyverse` and `palmerpenguins` package in your .qmd setup chunk if you haven\'t already. Update labels and add a title.
+
+    ```{r}
+    ggplot(data = penguins, aes(x = penguins$bill_length_mm, y = penguins$bill_depth_mm, color = species)) + geom_point() + labs(x = "Bill Length in MM", y = "Bill Depth in MM", title = "Penguin Size in Length and Width by Species")
+    ```
+
+```{r}
+ggplot(data = penguins, aes(x = penguins$species, y = penguins$flipper_length_mm, color = species)) + geom_jitter() + labs(x = "Species", y = "Flipper Length in MM", title = "Penguin Flipper Size by Species")
+```

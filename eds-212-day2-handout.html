@@ -131,7 +131,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 4214.784</code></pre>
 </div>
 </div></li>
+<li><p>Let’s create a penguin plot create a <code>ggplot</code> graph of penguin bill length versus bill depth (using the <code>penguins</code> dataset in the <code>palmerpenguins</code> package), with point color dependent on species. You should attach the <code>tidyverse</code> and <code>palmerpenguins</code> package in your .qmd setup chunk if you haven't already. Update labels and add a title.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> penguins<span class="sc">$</span>bill_length_mm, <span class="at">y =</span> penguins<span class="sc">$</span>bill_depth_mm, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length in MM"</span>, <span class="at">y =</span> <span class="st">"Bill Depth in MM"</span>, <span class="at">title =</span> <span class="st">"Penguin Size in Length and Width by Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Use of `penguins$bill_length_mm` is discouraged.
+ℹ Use `bill_length_mm` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Use of `penguins$bill_depth_mm` is discouraged.
+ℹ Use `bill_depth_mm` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="eds-212-day2-handout_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div></li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> penguins<span class="sc">$</span>species, <span class="at">y =</span> penguins<span class="sc">$</span>flipper_length_mm, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_jitter</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Species"</span>, <span class="at">y =</span> <span class="st">"Flipper Length in MM"</span>, <span class="at">title =</span> <span class="st">"Penguin Flipper Size by Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Use of `penguins$species` is discouraged.
+ℹ Use `species` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Use of `penguins$flipper_length_mm` is discouraged.
+ℹ Use `flipper_length_mm` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="eds-212-day2-handout_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 </main>
 <!-- /main column -->
