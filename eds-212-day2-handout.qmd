@@ -1,0 +1,8 @@
+---
+title: "eds-212-day2-handout"
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
